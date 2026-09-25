@@ -1,31 +1,26 @@
-<!DOCTYPE html><html lang="en"><head>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-
-    <meta name="author" content="Purva Saraswat">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>UTF-8 Encoding Example</title>
-
+    <title>File Upload Form</title>
 </head>
-
 <body>
 
-    <h1>UTF-8 Encoding Demonstration</h1>
+    <h1>File Upload Form</h1>
 
-    <p>
-        English: Hello, welcome to my webpage.
-    </p>
+    <form method="post" action="#">
 
-    <p>
-        Hindi: नमस्ते, मेरी वेबसाइट पर आपका स्वागत है।
-    </p>
+        <label for="file">Choose a file:</label>
+        <input type="file" id="file" name="file" accept=".jpg, .png">
 
-    <p>
-        Japanese: こんにちは、私のウェブページへようこそ。
-    </p>
+        <p>Only JPG and PNG image files are allowed.</p>
 
+        <br>
 
+        <input type="submit" value="Upload">
 
-</body></html>
+    </form>
+
+</body>
+</html>
