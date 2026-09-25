@@ -1,0 +1,137 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Element selector: styles the body element */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #222;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Element selector: styles the header */
+header {
+    text-align: center;
+    background-color: #1e293b;
+    color: white;
+    padding: 30px;
+}
+
+/* Element selector: styles heading */
+header h1 {
+    margin-bottom: 10px;
+}
+
+/* Class selector: styles the main container */
+.container {
+    flex: 1;
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+/* Class selector: styles each content box */
+.box {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Element selector: styles section headings */
+.box h2 {
+    color: #1e3a8a;
+    margin-bottom: 15px;
+}
+
+/* Element selector: styles paragraphs */
+.box p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Class selector: highlights elements with class="highlight" */
+.highlight {
+    background-color: #fef3c7;
+    padding: 10px;
+    border-left: 4px solid #f59e0b;
+}
+
+/* ID selector: styles the element with id="special-text" */
+#special-text {
+    background-color: #dbeafe;
+    color: #1d4ed8;
+    padding: 12px;
+    font-weight: bold;
+}
+
+/* Attribute selector: selects links having target="_blank" */
+a[target="_blank"] {
+    color: #dc2626;
+    font-weight: bold;
+}
+
+/* Attribute selector: selects all links with href attribute */
+a[href] {
+    text-decoration: none;
+}
+
+/* Descendant combinator: selects p inside .combinator-demo */
+.combinator-demo p {
+    background-color: #e0f2fe;
+    padding: 10px;
+}
+
+/* Child combinator (>): selects only direct child p */
+.combinator-demo > p {
+    border-left: 5px solid #2563eb;
+}
+
+/* Adjacent sibling combinator (+): selects p immediately after div */
+.combinator-demo div + p {
+    background-color: #dcfce7;
+    border-left: 5px solid #16a34a;
+}
+
+/* General sibling combinator (~): selects p after the div */
+.combinator-demo div ~ p {
+    color: #166534;
+}
+
+/* Element selector: styles unordered list */
+ul {
+    padding-left: 25px;
+}
+
+/* Element selector: styles list items */
+li {
+    margin-bottom: 8px;
+    padding: 8px;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    background-color: #1e293b;
+    color: white;
+    padding: 20px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        margin: 25px auto;
+    }
+
+    .box {
+        padding: 20px;
+    }
+}

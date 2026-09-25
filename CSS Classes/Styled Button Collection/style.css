@@ -1,0 +1,176 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #222;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    background-color: #1e293b;
+    color: white;
+    padding: 30px;
+}
+
+/* Header heading spacing */
+header h1 {
+    margin-bottom: 10px;
+}
+
+/* Main container */
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+/* Button card */
+.button-card {
+    width: 90%;
+    max-width: 800px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Card heading */
+.button-card h2 {
+    color: #1e3a8a;
+    margin-bottom: 30px;
+}
+
+/* Align buttons using Flexbox */
+.button-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Common button styling */
+.btn {
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Primary button */
+.primary {
+    background-color: #2563eb;
+    color: white;
+    border: 2px solid #2563eb;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+}
+
+/* Primary hover effect */
+.primary:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+/* Primary active effect */
+.primary:active {
+    transform: scale(0.95);
+}
+
+/* Secondary button */
+.secondary {
+    background-color: #16a34a;
+    color: white;
+    border: 2px solid #16a34a;
+    box-shadow: 0 4px 10px rgba(22, 163, 74, 0.3);
+}
+
+/* Secondary hover effect */
+.secondary:hover {
+    background-color: #15803d;
+    transform: translateY(-2px);
+}
+
+/* Secondary active effect */
+.secondary:active {
+    transform: scale(0.95);
+}
+
+/* Outline button */
+.outline {
+    background-color: white;
+    color: #7c3aed;
+    border: 2px solid #7c3aed;
+}
+
+/* Outline hover effect */
+.outline:hover {
+    background-color: #7c3aed;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Outline active effect */
+.outline:active {
+    transform: scale(0.95);
+}
+
+/* Focus pseudo-class */
+.btn:focus {
+    outline: 3px solid #fbbf24;
+    outline-offset: 3px;
+}
+
+/* Disabled button */
+.btn:disabled {
+    background-color: #cbd5e1;
+    color: #64748b;
+    border: 2px solid #cbd5e1;
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Information text */
+.info {
+    margin-top: 30px;
+    color: #64748b;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    background-color: #1e293b;
+    color: white;
+    padding: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .button-card {
+        padding: 30px 20px;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 200px;
+    }
+}
