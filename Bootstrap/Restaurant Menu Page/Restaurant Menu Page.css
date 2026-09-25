@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+header {
+    background: linear-gradient(135deg, #212529, #495057);
+}
+
+main {
+    min-height: 75vh;
+}
+
+.table {
+    background-color: white;
+}
+
+.table th,
+.table td {
+    padding: 15px;
+}
+
+.list-group-item {
+    padding: 18px;
+    line-height: 1.5;
+}
+
+.food-section {
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.food-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+figcaption {
+    color: #6c757d;
+}
+
+footer {
+    margin-top: 20px;
+}
+
+@media (max-width: 576px) {
+    header {
+        padding: 40px 15px !important;
+    }
+
+    .table th,
+    .table td {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .food-image {
+        max-height: 280px;
+    }
+}

@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+header {
+    background: linear-gradient(135deg, #212529, #343a40);
+}
+
+main {
+    min-height: 70vh;
+}
+
+.task-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.task-item:hover {
+    background-color: #f1f5f9;
+    transform: translateX(5px);
+}
+
+.task-item h5 {
+    color: #212529;
+}
+
+.task-item .badge {
+    min-width: 75px;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+}
+
+.btn {
+    padding: 10px 22px;
+}
+
+@media (max-width: 576px) {
+    header .container {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 1.7rem;
+    }
+
+    .task-item {
+        align-items: flex-start;
+        padding: 18px 15px;
+    }
+
+    .task-item h5 {
+        font-size: 1rem;
+    }
+}
