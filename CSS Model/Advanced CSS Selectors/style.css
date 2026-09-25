@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #222;
+}
+
+header {
+    text-align: center;
+    background-color: #1e293b;
+    color: white;
+    padding: 35px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+main {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+section {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+/* Attribute selector: selects input elements with type="text" */
+input[type="text"] {
+    border: 2px solid #2563eb;
+}
+
+/* Attribute selector: selects links whose href starts with "https" */
+a[href^="https"] {
+    color: #16a34a;
+    font-weight: bold;
+}
+
+/* Pseudo-class: changes list item when mouse hovers */
+li:hover {
+    color: #2563eb;
+    cursor: pointer;
+}
+
+/* Pseudo-class: changes input when it receives focus */
+input:focus {
+    outline: 3px solid #93c5fd;
+}
+
+/* Pseudo-class: styles every second list item */
+li:nth-child(2) {
+    background-color: #dbeafe;
+}
+
+/* Pseudo-element: adds content before the heading */
+.items h2::before {
+    content: "★ ";
+    color: #f59e0b;
+}
+
+/* Pseudo-element: adds content after the heading */
+.items h2::after {
+    content: " ★";
+    color: #f59e0b;
+}
+
+/* Child combinator (>): selects only direct child paragraphs */
+.parent > p {
+    color: #2563eb;
+    font-weight: bold;
+}
+
+/* Descendant combinator: selects all paragraphs inside .parent */
+.parent p {
+    padding: 8px;
+}
+
+/* Adjacent sibling combinator (+): selects paragraph immediately after div */
+.parent div + p {
+    background-color: #dcfce7;
+}
+
+/* General sibling combinator (~): selects all paragraphs after div */
+.parent div ~ p {
+    border-left: 4px solid #16a34a;
+}
+
+/* Descendant selector: selects links inside form-section */
+.form-section a {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+input {
+    padding: 12px;
+    margin-right: 10px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+}
+
+li {
+    padding: 10px;
+    list-style-position: inside;
+}
+
+footer {
+    text-align: center;
+    background-color: #1e293b;
+    color: white;
+    padding: 20px;
+}
+
+@media (max-width: 600px) {
+    main {
+        width: 95%;
+    }
+
+    input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

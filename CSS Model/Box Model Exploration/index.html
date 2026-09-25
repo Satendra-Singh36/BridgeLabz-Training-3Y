@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model Exploration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>CSS Box Model Exploration</h1>
+        <p>Content, Padding, Border and Margin</p>
+    </header>
+
+    <main>
+
+        <section class="intro">
+            <h2>Understanding the Box Model</h2>
+            <p>
+                Every HTML element is treated as a box consisting of
+                content, padding, border, and margin.
+            </p>
+        </section>
+
+        <section class="demo-area">
+
+            <div class="box-model">
+
+                <div class="margin-layer">
+                    <span class="layer-label">Margin</span>
+
+                    <div class="border-layer">
+                        <span class="layer-label">Border</span>
+
+                        <div class="padding-layer">
+                            <span class="layer-label">Padding</span>
+
+                            <div class="content-layer">
+                                Content
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="description">
+
+            <div class="info">
+                <h3>Content</h3>
+                <p>The actual text or data inside an element.</p>
+            </div>
+
+            <div class="info">
+                <h3>Padding</h3>
+                <p>Space between the content and the border.</p>
+            </div>
+
+            <div class="info">
+                <h3>Border</h3>
+                <p>The line surrounding the padding and content.</p>
+            </div>
+
+            <div class="info">
+                <h3>Margin</h3>
+                <p>Space outside the border that separates elements.</p>
+            </div>
+
+        </section>
+
+        <section class="sizing">
+
+            <h2>Box-Sizing Comparison</h2>
+
+            <div class="comparison">
+
+                <div class="size-box default-box">
+                    <h3>Default Box</h3>
+                    <p>box-sizing: content-box</p>
+                </div>
+
+                <div class="size-box border-box">
+                    <h3>Border Box</h3>
+                    <p>box-sizing: border-box</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>CSS Assignment 7 - Question 8</p>
+    </footer>
+
+</body>
+</html>

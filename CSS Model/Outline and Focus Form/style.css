@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #222;
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    background-color: #1e293b;
+    color: white;
+    padding: 35px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+/* Center the form using Flexbox */
+main {
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* Form container */
+.contact-form {
+    width: 100%;
+    max-width: 500px;
+    padding: 35px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #1e3a8a;
+}
+
+/* Uniform spacing for form elements */
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #cbd5e1;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    font-size: 1rem;
+}
+
+/* Different outline styles */
+#name {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+}
+
+#email {
+    outline: 2px dashed #16a34a;
+    outline-offset: 3px;
+}
+
+#subject {
+    outline: 2px dotted #9333ea;
+    outline-offset: 2px;
+}
+
+#message {
+    outline: 2px double #dc2626;
+    outline-offset: 3px;
+    resize: vertical;
+}
+
+/* Change outline color when element receives focus */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline-color: #f59e0b;
+    border-color: #f59e0b;
+    box-shadow: 0 0 8px rgba(245, 158, 11, 0.25);
+}
+
+/* Submit button */
+button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2563eb;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #1e293b;
+    color: white;
+    padding: 20px;
+}
+
+@media (max-width: 600px) {
+    .contact-form {
+        padding: 25px;
+    }
+}
