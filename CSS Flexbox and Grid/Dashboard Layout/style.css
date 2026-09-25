@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #222;
+}
+
+/* Main dashboard grid */
+.dashboard {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: 80px 1fr;
+    grid-template-areas:
+        "header header"
+        "sidebar main";
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Header spans all columns */
+header {
+    grid-area: header;
+    background-color: #1e293b;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+/* Sidebar */
+aside {
+    grid-area: sidebar;
+    background-color: #334155;
+    color: white;
+    padding: 25px 15px;
+    border-radius: 10px;
+}
+
+aside h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+nav a:hover {
+    background-color: #2563eb;
+}
+
+/* Main content uses two-column Grid */
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Dashboard boxes */
+.box {
+    min-height: 180px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.box h2 {
+    color: #1e3a8a;
+    margin-bottom: 15px;
+}
+
+.box p {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* One box spans two columns */
+.box-wide {
+    grid-column: span 2;
+}
+
+/* Hover effect */
+.box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive layout */
+@media (max-width: 700px) {
+
+    .dashboard {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr;
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "main";
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .box-wide {
+        grid-column: span 1;
+    }
+}

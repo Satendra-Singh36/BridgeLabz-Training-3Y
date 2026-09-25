@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f1f5f9;
+}
+
+/* Center animation using Flexbox */
+main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.circle {
+    width: 22px;
+    height: 22px;
+    background-color: #2563eb;
+    border-radius: 50%;
+
+    animation-name: loading;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+/* Slight delay for each circle */
+.circle-one {
+    animation-delay: 0s;
+}
+
+.circle-two {
+    animation-delay: 0.2s;
+}
+
+.circle-three {
+    animation-delay: 0.4s;
+}
+
+/* Up and down movement */
+@keyframes loading {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-25px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

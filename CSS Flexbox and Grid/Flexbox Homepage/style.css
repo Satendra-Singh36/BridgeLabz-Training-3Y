@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #222;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background-color: #1e293b;
+    color: white;
+    padding: 25px 5%;
+}
+
+header h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Navigation links */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #2563eb;
+    border-radius: 6px;
+}
+
+/* Main boxes */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 50px 6%;
+}
+
+.box {
+    flex: 1;
+    max-width: 350px;
+    min-height: 220px;
+    padding: 35px;
+    background-color: white;
+    border-radius: 12px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Rotate boxes on hover */
+.box:hover {
+    transform: rotate(2deg);
+}
+
+.box h2 {
+    color: #1e3a8a;
+    margin-bottom: 15px;
+}
+
+.box p {
+    line-height: 1.6;
+}
+
+/* Footer stays at bottom */
+footer {
+    width: 100%;
+    text-align: center;
+    background-color: #1e293b;
+    color: white;
+    padding: 20px;
+}
+
+/* Responsive layout */
+@media (max-width: 700px) {
+
+    nav {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    .box {
+        width: 90%;
+    }
+}
