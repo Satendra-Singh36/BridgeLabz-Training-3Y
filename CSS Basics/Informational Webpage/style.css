@@ -1,0 +1,97 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #222;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 30px;
+    background-color: #263238;
+    color: white;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Navigation */
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1rem;
+}
+
+/* Common section styling */
+section {
+    min-height: 70vh;
+    width: 100%;
+    padding: 80px 8%;
+    border-bottom: 5px solid white;
+}
+
+section h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+section p {
+    max-width: 800px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Linear gradient section */
+.history {
+    background: linear-gradient(to right, #dbeafe, #93c5fd);
+    background-attachment: fixed;
+}
+
+/* Radial gradient section */
+.culture {
+    background: radial-gradient(circle, #fde68a, #f59e0b);
+    background-attachment: fixed;
+}
+
+/* Third section */
+.places {
+    background: linear-gradient(to bottom, #d1fae5, #6ee7b7);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #263238;
+    color: white;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    section {
+        padding: 60px 5%;
+    }
+}
