@@ -1,6 +1,7 @@
-"use strict";
-
+// Creating Book class
 class Book {
+
+    // Constructor
     constructor(title, author, ISBN, isIssued = false) {
         this.title = title;
         this.author = author;
@@ -8,41 +9,88 @@ class Book {
         this.isIssued = isIssued;
     }
 
+    // Method to issue book
     issueBook() {
         if (!this.isIssued) {
             this.isIssued = true;
-            console.log(`${this.title} issued successfully.`);
+            console.log(this.title + " Book Issued Successfully!");
         } else {
-            console.log(`${this.title} is already issued.`);
+            console.log(this.title + " Book is already issued!");
         }
     }
 
+    // Method to return book
     returnBook() {
         if (this.isIssued) {
             this.isIssued = false;
-            console.log(`${this.title} returned successfully.`);
+            console.log(this.title + " Book Returned Successfully!");
         } else {
-            console.log(`${this.title} is already available.`);
+            console.log(this.title + " Book is already available!");
         }
     }
 }
 
-const books = [
-    new Book("JavaScript Basics", "John", "101"),
-    new Book("Python Guide", "David", "102"),
-    new Book("Web Development", "Alex", "103", true)
-];
+// Creating book objects
+let book1 = new Book("JavaScript", "John", "101");
+let book2 = new Book("Python", "David", "102");
+let book3 = new Book("Java", "James", "103");
+let book4 = new Book("HTML", "Peter", "104");
+let book5 = new Book("CSS", "Robert", "105");
 
-console.log("Available Books:");
-books.filter(book => !book.isIssued).forEach(book => {
-    console.log(`${book.title} | ${book.author} | ISBN: ${book.ISBN}`);
-});
+// Storing books in an array
+let books = [book1, book2, book3, book4, book5];
 
-const searchISBN = "102";
-const selectedBook = books.find(book => book.ISBN === searchISBN);
+// Displaying available books
+function displayAvailableBooks() {
 
-if (selectedBook) {
-    selectedBook.issueBook();
-} else {
-    console.log("Book not found.");
+    console.log("\nAvailable Books:");
+
+    let availableBooks = books.filter(book => !book.isIssued);
+
+    availableBooks.forEach(book => {
+        console.log(
+            "Title: " + book.title +
+            ", Author: " + book.author +
+            ", ISBN: " + book.ISBN
+        );
+    });
 }
+
+// Issue book by searching ISBN
+function searchAndIssueBook(isbn) {
+
+    let book = books.find(book => book.ISBN === isbn);
+
+    if (book) {
+        book.issueBook();
+    } else {
+        console.log("Book Not Found!");
+    }
+}
+
+// Return book by searching ISBN
+function searchAndReturnBook(isbn) {
+
+    let book = books.find(book => book.ISBN === isbn);
+
+    if (book) {
+        book.returnBook();
+    } else {
+        console.log("Book Not Found!");
+    }
+}
+
+// Display available books
+displayAvailableBooks();
+
+// Issue book
+searchAndIssueBook("102");
+
+// Display available books again
+displayAvailableBooks();
+
+// Return book
+searchAndReturnBook("102");
+
+// Display available books again
+displayAvailableBooks();

@@ -1,56 +1,111 @@
-"use strict";
 
-const form = document.getElementById("studentForm");
+// Q2: Student Form Validator (Forms + RegExp)
 
-const patterns = {
-    name: /^[A-Za-z]+$/,
-    email: /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/,
-    phone: /^\d{10}$/,
-    password: /^(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9\s])\S+$/
-};
+// Creating form dynamically
+document.body.innerHTML = `
+    <h2>Student Registration Form</h2>
 
-const messages = {
-    name: "Name must contain alphabets only.",
-    email: "Enter a valid email address.",
-    phone: "Phone must contain exactly 10 digits.",
-    password: "Password must contain an uppercase letter, a number, and a special character."
-};
+    <form id="studentForm">
 
-function validateField(field) {
-    const input = document.getElementById(field);
-    const error = document.getElementById(field + "Error");
-    const value = input.value.trim();
-    const isValid = patterns[field].test(value);
+        <label>Name:</label>
+        <input type="text" id="name" placeholder="Enter Name">
+        <span id="nameError"></span>
+        <br><br>
 
-    input.classList.toggle("valid", isValid);
-    input.classList.toggle("invalid", !isValid);
-    error.textContent = isValid ? "" : messages[field];
+        <label>Email:</label>
+        <input type="text" id="email" placeholder="Enter Email">
+        <span id="emailError"></span>
+        <br><br>
 
-    return isValid;
-}
+        <label>Phone:</label>
+        <input type="text" id="phone" placeholder="Enter Phone">
+        <span id="phoneError"></span>
+        <br><br>
 
-Object.keys(patterns).forEach(field => {
-    document.getElementById(field).addEventListener("input", () => {
-        validateField(field);
-    });
-});
+        <label>Password:</label>
+        <input type="password" id="password" placeholder="Enter Password">
+        <span id="passwordError"></span>
+        <br><br>
 
+        <button type="submit">Register</button>
+
+        <p id="message"></p>
+
+    </form>
+`;
+
+// Selecting form
+let form = document.getElementById("studentForm");
+
+// Form submit event
 form.addEventListener("submit", function(event) {
+
     event.preventDefault();
 
-    const isValid = Object.keys(patterns)
-        .map(validateField)
-        .every(Boolean);
+    // Getting input values
+    let name = document.getElementById("name");
+    let email = document.getElementById("email");
+    let phone = document.getElementById("phone");
+    let password = document.getElementById("password");
 
-    const result = document.getElementById("result");
+    // Regular Expressions
+    let nameRegex = /^[A-Za-z]+$/;
 
-    if (isValid) {
-        result.textContent = "Registration successful!";
-        result.style.color = "green";
-        console.log("Registration successful!");
+    let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    let phoneRegex = /^[0-9]{10}$/;
+
+    let passwordRegex = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9]).+$/;
+
+    // Name Validation
+    if (nameRegex.test(name.value.trim())) {
+        name.style.border = "2px solid green";
+        document.getElementById("nameError").innerText = "";
     } else {
-        result.textContent = "Please correct the errors.";
-        result.style.color = "red";
-        console.log("Registration failed!");
+        name.style.border = "2px solid red";
+        document.getElementById("nameError").innerText = "Only alphabets allowed";
     }
+
+    // Email Validation
+    if (emailRegex.test(email.value.trim())) {
+        email.style.border = "2px solid green";
+        document.getElementById("emailError").innerText = "";
+    } else {
+        email.style.border = "2px solid red";
+        document.getElementById("emailError").innerText = "Invalid Email";
+    }
+
+    // Phone Validation
+    if (phoneRegex.test(phone.value.trim())) {
+        phone.style.border = "2px solid green";
+        document.getElementById("phoneError").innerText = "";
+    } else {
+        phone.style.border = "2px solid red";
+        document.getElementById("phoneError").innerText = "Enter exactly 10 digits";
+    }
+
+    // Password Validation
+    if (passwordRegex.test(password.value)) {
+        password.style.border = "2px solid green";
+        document.getElementById("passwordError").innerText = "";
+    } else {
+        password.style.border = "2px solid red";
+        document.getElementById("passwordError").innerText =
+            "Must contain uppercase, number and special character";
+    }
+
+    // Checking all fields
+    if (
+        nameRegex.test(name.value.trim()) &&
+        emailRegex.test(email.value.trim()) &&
+        phoneRegex.test(phone.value.trim()) &&
+        passwordRegex.test(password.value)
+    ) {
+        document.getElementById("message").innerText =
+            "Registration Successful!";
+    } else {
+        document.getElementById("message").innerText =
+            "Please correct the errors!";
+    }
+
 });
