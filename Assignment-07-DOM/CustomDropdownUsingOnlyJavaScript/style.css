@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    padding: 50px;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+.dropdown {
+    width: 250px;
+    margin: auto;
+    position: relative;
+}
+
+/* Dropdown Button */
+#dropdownButton {
+    width: 100%;
+    padding: 12px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Dropdown Options */
+.dropdown-options {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+/* Show Dropdown */
+.dropdown-options.show {
+    display: block;
+}
+
+/* Individual Option */
+.option {
+    padding: 12px;
+    cursor: pointer;
+}
+
+.option:hover {
+    background-color: #ddd;
+}
+
+#selectedValue {
+    margin-top: 25px;
+    font-weight: bold;
+}

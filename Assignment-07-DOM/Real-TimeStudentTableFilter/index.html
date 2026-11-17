@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Table Filter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Student Records</h1>
+
+        <!-- Search Box -->
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search by Name, Branch or CGPA..."
+        >
+
+        <!-- Student Table -->
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Branch</th>
+                    <th>CGPA</th>
+                </tr>
+            </thead>
+
+            <tbody id="studentTable">
+
+                <tr>
+                    <td>Rahul</td>
+                    <td>CSE</td>
+                    <td>8.5</td>
+                </tr>
+
+                <tr>
+                    <td>Aman</td>
+                    <td>IT</td>
+                    <td>9.0</td>
+                </tr>
+
+                <tr>
+                    <td>Priya</td>
+                    <td>ECE</td>
+                    <td>8.2</td>
+                </tr>
+
+                <tr>
+                    <td>Rohit</td>
+                    <td>CSE</td>
+                    <td>7.8</td>
+                </tr>
+
+                <tr>
+                    <td>Neha</td>
+                    <td>IT</td>
+                    <td>9.2</td>
+                </tr>
+
+                <tr>
+                    <td>Vikas</td>
+                    <td>Mechanical</td>
+                    <td>7.5</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+        <!-- No Results Message -->
+        <p id="noResults" hidden>No results found</p>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    padding: 30px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Image Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+}
+
+
+/* Modal Background */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.85);
+
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    max-width: 80%;
+    max-height: 85%;
+}
+
+
+/* Large Image */
+.modal-content img {
+    display: block;
+    max-width: 100%;
+    max-height: 85vh;
+    border-radius: 10px;
+}
+
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: -40px;
+    right: -10px;
+
+    background: transparent;
+    color: white;
+
+    border: none;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+
+/* Responsive Design */
+@media (max-width: 600px) {
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery img {
+        height: 150px;
+    }
+
+    .modal-content {
+        max-width: 95%;
+    }
+}

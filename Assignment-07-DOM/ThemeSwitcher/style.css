@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 40px;
+    transition: 0.3s;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+/* Light Theme */
+.light-theme {
+    background-color: white;
+    color: black;
+}
+
+.light-theme .container {
+    background-color: #eeeeee;
+}
+
+/* Dark Theme */
+.dark-theme {
+    background-color: #222222;
+    color: white;
+}
+
+.dark-theme .container {
+    background-color: #444444;
+}
+
+/* Blue Theme */
+.blue-theme {
+    background-color: #cce5ff;
+    color: #003366;
+}
+
+.blue-theme .container {
+    background-color: #80bdff;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+#lightButton {
+    background-color: #555555;
+}
+
+#darkButton {
+    background-color: black;
+}
+
+#blueButton {
+    background-color: blue;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+#currentTheme {
+    margin-top: 25px;
+    font-weight: bold;
+}
